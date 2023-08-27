@@ -5,7 +5,7 @@ export const fetchContacts = createAsyncThunk(
   'contacts/fetchContacts',
   async () => {
     const response = await axios.get(
-      'https://64ead94fe51e1e82c576ce2f.mockapi.io/contacts'
+      'https://64eae529e51e1e82c576d427.mockapi.io/contacts'
     );
     return response.data;
   }
@@ -15,7 +15,7 @@ export const createContact = createAsyncThunk(
   'contacts/createContact',
   async contact => {
     const response = await axios.post(
-      'https://64ead94fe51e1e82c576ce2f.mockapi.io/contacts',
+      'https://64eae529e51e1e82c576d427.mockapi.io/contacts',
       contact
     );
     return response.data;
@@ -26,7 +26,7 @@ export const deleteContact = createAsyncThunk(
   'contacts/deleteContact',
   async contactId => {
     await axios.delete(
-      `https://64ead94fe51e1e82c576ce2f.mockapi.io/contacts/${contactId}`
+      `https://64eae529e51e1e82c576d427.mockapi.io/contacts/${contactId}`
     );
     return contactId;
   }
